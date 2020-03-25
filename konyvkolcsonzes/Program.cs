@@ -31,6 +31,8 @@ namespace konyvkolcsonzes
             {
                 conn.Open();
                 sql = conn.CreateCommand();
+                Konyvek_betoltese();
+                Berlok_betoltese();
             }
             catch (MySqlException ex)
             {
@@ -44,6 +46,53 @@ namespace konyvkolcsonzes
             form_navigalo = new Form_navigalo();
             form_visszavitel = new Form_visszavitel();
             Application.Run(form_navigalo);
+        }
+
+        public static void Berlok_betoltese()
+        {
+            berlok.Clear();
+            //-- Bérlő adatainak a betöltése ---------------
+            sql.CommandText = "SELECT `ID`,`nev` FROM `kolcsonzo`;";
+            try
+            {
+                using (MySqlDataReader dr = Program.sql.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Berlo uj = new Berlo(dr.GetInt32("ID"), dr.GetString("nev"));
+                        berlok.Add(uj);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                Environment.Exit(0);
+            }
+
+        }
+
+        public static void Konyvek_betoltese()
+        {
+            //-- Könyv adatok betöltése ------------------------
+            Program.sql.CommandText = "SELECT `Kód` AS kod,`Szerző` as szerzo,`Cím` as cim,`Kiadás éve` as kiadasEve,`ár` as ar,`ISBN` FROM `konyvek`;";
+            try
+            {
+                using (MySqlDataReader dr = Program.sql.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Konyv uj = new Konyv(dr.GetString("kod"), dr.GetString("szerzo"), dr.GetString("cim"), dr.GetInt32("kiadasEve"), dr.GetInt32("ar"), dr.GetString("ISBN"));
+                        Program.konyvek.Add(uj);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                Environment.Exit(0);
+            }
+
         }
     }
 }

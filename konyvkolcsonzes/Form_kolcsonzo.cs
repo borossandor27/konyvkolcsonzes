@@ -29,42 +29,15 @@ namespace konyvkolcsonzes
         private void Form_kolcsonzo_Load(object sender, EventArgs e)
         {
             //-- Könyv adatok betöltése ------------------------
-            Program.sql.CommandText = "SELECT `Kód` AS kod,`Szerző` as szerzo,`Cím` as cim,`Kiadás éve` as kiadasEve,`ár` as ar,`ISBN` FROM `konyvek`;";
-            try
+            foreach (Konyv item in Program.konyvek)
             {
-                using (MySqlDataReader dr = Program.sql.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        Konyv uj = new Konyv(dr.GetString("kod"), dr.GetString("szerzo"), dr.GetString("cim"), dr.GetInt32("kiadasEve"), dr.GetInt32("ar"), dr.GetString("ISBN"));
-                        Program.konyvek.Add(uj);
-                        comboBox_Konyvlista.Items.Add(uj);
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                Environment.Exit(0);
+                comboBox_Konyvlista.Items.Add(item);
             }
             //-- Bérlő adatainak a betöltése ---------------
-            Program.sql.CommandText = "SELECT `ID`,`nev` FROM `kolcsonzo`;";
-            try
+            foreach (Berlo item in Program.berlok)
             {
-                using (MySqlDataReader dr = Program.sql.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        Berlo uj = new Berlo(dr.GetInt32("ID"), dr.GetString("nev"));
-                        Program.berlok.Add(uj);
-                        comboBox_Berlolista.Items.Add(uj);
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                Environment.Exit(0);
+                comboBox_Berlolista.Items.Add(item);
+
             }
         }
 

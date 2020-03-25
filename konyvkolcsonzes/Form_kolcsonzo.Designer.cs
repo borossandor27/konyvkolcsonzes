@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_kolcsonzo));
             this.listBox_Kolcsonzesek = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numeric_Peldany = new System.Windows.Forms.NumericUpDown();
@@ -145,8 +146,9 @@
             this.Controls.Add(this.button_Insert_kolcsonzes);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox_Kolcsonzesek);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_kolcsonzo";
-            this.Text = "Form_kolcsonzo";
+            this.Text = "Kölcsönzések";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_kolcsonzo_FormClosing);
             this.Load += new System.EventHandler(this.Form_kolcsonzo_Load);
             this.groupBox1.ResumeLayout(false);

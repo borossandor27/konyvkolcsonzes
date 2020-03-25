@@ -15,6 +15,7 @@ namespace konyvkolcsonzes
         int kiadas_Eve;
         int ar;
         string isbn;
+
         //-- berlo adatok
         int id;
         string nev;
@@ -25,9 +26,9 @@ namespace konyvkolcsonzes
         DateTime kolcsonzesDatuma = DateTime.Now;
         int pld;
 
-        public string Konyv_ID { get => Konyv_ID1; set => Konyv_ID1 = value; }
-        public int Kolcsonzo_ID { get => Kolcsonzo_ID1; set => Kolcsonzo_ID1 = value; }
-        public DateTime KolcsonzesDatuma { get => KolcsonzesDatuma1; set => KolcsonzesDatuma1 = value; }
+        public string Konyv_ID { get => konyv_ID; set => konyv_ID = value; }
+        public int Kolcsonzo_ID { get => kolcsonzo_ID; set => kolcsonzo_ID = value; }
+        public DateTime KolcsonzesDatuma { get => kolcsonzesDatuma; set => kolcsonzesDatuma = value; }
         public string Kod { get => kod; set => kod = value; }
         public string Szerzo { get => szerzo; set => szerzo = value; }
         public string Cim { get => cim; set => cim = value; }
@@ -36,9 +37,6 @@ namespace konyvkolcsonzes
         public string Isbn { get => isbn; set => isbn = value; }
         public int Id { get => id; set => id = value; }
         public string Nev { get => nev; set => nev = value; }
-        public string Konyv_ID1 { get => konyv_ID; set => konyv_ID = value; }
-        public int Kolcsonzo_ID1 { get => kolcsonzo_ID; set => kolcsonzo_ID = value; }
-        public DateTime KolcsonzesDatuma1 { get => kolcsonzesDatuma; set => kolcsonzesDatuma = value; }
         public int Pld { get => pld; set => pld = value; }
 
         public Kolcsonzes(Konyv konyv, Berlo berlo, int pld)
@@ -52,10 +50,27 @@ namespace konyvkolcsonzes
             //-- berlo adatok
             this.Id = berlo.Id;
             this.Nev = berlo.Nev;
-            this.Konyv_ID1 = konyv.Kod;
-            this.Kolcsonzo_ID1 = berlo.Id;
+            this.Konyv_ID = konyv.Kod;
+            this.Kolcsonzo_ID = berlo.Id;
             this.Pld = pld;
         }
+
+        public Kolcsonzes(string kod, string szerzo, string cim, int kiadas_Eve, int ar, string isbn, int berlo_Id, string nev, DateTime kolcsonzesDatuma, int pld)
+        {
+            this.kod = kod;
+            this.szerzo = szerzo;
+            this.cim = cim;
+            this.kiadas_Eve = kiadas_Eve;
+            this.ar = ar;
+            this.isbn = isbn;
+            this.id = berlo_Id;
+            this.nev = nev;
+            this.konyv_ID = kod;
+            this.kolcsonzo_ID = berlo_Id;
+            this.kolcsonzesDatuma = kolcsonzesDatuma;
+            this.pld = pld;
+        }
+
         public override string ToString()
         {
             return $"{Nev} -> {Szerzo}:{Cim} ({Pld.ToString()} db)";
