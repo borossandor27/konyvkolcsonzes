@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using konyvkolcsonzes.Properties;
 
 namespace konyvkolcsonzes
 {
@@ -15,6 +16,24 @@ namespace konyvkolcsonzes
         public Form_navigalo()
         {
             InitializeComponent();
+        }
+
+        private void button_Kolcsonzes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.form_kolcsonzo.Show();
+        }
+
+        private void button_Visszavitel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.form_visszavitel.Show();
+        }
+
+        private void button_Kesesek_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.form_kesesek.Show();
         }
     }
 }

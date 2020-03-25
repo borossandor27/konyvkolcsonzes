@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Berlo.cs" />
     <Compile Include="Form_kesesek.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,10 +93,22 @@
     <Compile Include="Form_visszavitel.Designer.cs">
       <DependentUpon>Form_visszavitel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kolcsonzes.cs" />
+    <Compile Include="Kolcsonzo.cs" />
+    <Compile Include="Konyv.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_kesesek.resx">
+      <DependentUpon>Form_kesesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_kolcsonzo.resx">
+      <DependentUpon>Form_kolcsonzo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_navigalo.resx">
       <DependentUpon>Form_navigalo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_visszavitel.resx">
+      <DependentUpon>Form_visszavitel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +119,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="konyvkolcsonzes.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

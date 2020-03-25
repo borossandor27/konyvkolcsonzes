@@ -42,6 +42,7 @@
             this.button_Kolcsonzes.TabIndex = 0;
             this.button_Kolcsonzes.Text = "Kölcsönzés";
             this.button_Kolcsonzes.UseVisualStyleBackColor = true;
+            this.button_Kolcsonzes.Click += new System.EventHandler(this.button_Kolcsonzes_Click);
             // 
             // button_Visszavitel
             // 
@@ -51,6 +52,7 @@
             this.button_Visszavitel.TabIndex = 0;
             this.button_Visszavitel.Text = "Visszavitel";
             this.button_Visszavitel.UseVisualStyleBackColor = true;
+            this.button_Visszavitel.Click += new System.EventHandler(this.button_Visszavitel_Click);
             // 
             // button_Kesesek
             // 
@@ -60,6 +62,7 @@
             this.button_Kesesek.TabIndex = 0;
             this.button_Kesesek.Text = "Késések";
             this.button_Kesesek.UseVisualStyleBackColor = true;
+            this.button_Kesesek.Click += new System.EventHandler(this.button_Kesesek_Click);
             // 
             // Form_navigalo
             // 

@@ -16,5 +16,12 @@ namespace konyvkolcsonzes
         {
             InitializeComponent();
         }
+
+        private void Form_visszavitel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.form_navigalo.Show();
+            this.Hide();
+            e.Cancel = true;
+        }
     }
 }
