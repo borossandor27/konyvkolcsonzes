@@ -16,7 +16,7 @@ namespace konyvkolcsonzes
         public static Form form_kolcsonzo = null;
         public static Form form_visszavitel = null;
         public static List<Konyv> konyvek = new List<Konyv>();
-        public static List<Berlo> berlok = new List<Berlo>(); 
+        public static List<Berlo> berlok = new List<Berlo>();
 
         static void Main()
         {
@@ -52,7 +52,7 @@ namespace konyvkolcsonzes
         {
             berlok.Clear();
             //-- Bérlő adatainak a betöltése ---------------
-            sql.CommandText = "SELECT `ID`,`nev` FROM `kolcsonzo`;";
+            sql.CommandText = "SELECT `ID`,`nev` FROM `kolcsonzo` ORDER BY `nev` ;";
             try
             {
                 using (MySqlDataReader dr = Program.sql.ExecuteReader())
@@ -92,6 +92,11 @@ namespace konyvkolcsonzes
                 MessageBox.Show(ex.Message);
                 Environment.Exit(0);
             }
+
+        }
+
+        public static void  Gombot_Kerekit(Button g)
+        {
 
         }
     }

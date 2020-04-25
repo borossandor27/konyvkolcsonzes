@@ -36,32 +36,42 @@
             // 
             // button_Kolcsonzes
             // 
+            this.button_Kolcsonzes.AutoEllipsis = true;
+            this.button_Kolcsonzes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Kolcsonzes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Kolcsonzes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button_Kolcsonzes.Location = new System.Drawing.Point(36, 48);
             this.button_Kolcsonzes.Name = "button_Kolcsonzes";
             this.button_Kolcsonzes.Size = new System.Drawing.Size(75, 23);
             this.button_Kolcsonzes.TabIndex = 0;
             this.button_Kolcsonzes.Text = "Kölcsönzés";
-            this.button_Kolcsonzes.UseVisualStyleBackColor = true;
+            this.button_Kolcsonzes.UseVisualStyleBackColor = false;
             this.button_Kolcsonzes.Click += new System.EventHandler(this.button_Kolcsonzes_Click);
             // 
             // button_Visszavitel
             // 
-            this.button_Visszavitel.Location = new System.Drawing.Point(131, 48);
+            this.button_Visszavitel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Visszavitel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Visszavitel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button_Visszavitel.Location = new System.Drawing.Point(133, 48);
             this.button_Visszavitel.Name = "button_Visszavitel";
             this.button_Visszavitel.Size = new System.Drawing.Size(75, 23);
             this.button_Visszavitel.TabIndex = 0;
             this.button_Visszavitel.Text = "Visszavitel";
-            this.button_Visszavitel.UseVisualStyleBackColor = true;
+            this.button_Visszavitel.UseVisualStyleBackColor = false;
             this.button_Visszavitel.Click += new System.EventHandler(this.button_Visszavitel_Click);
             // 
             // button_Kesesek
             // 
+            this.button_Kesesek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Kesesek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Kesesek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button_Kesesek.Location = new System.Drawing.Point(230, 48);
             this.button_Kesesek.Name = "button_Kesesek";
             this.button_Kesesek.Size = new System.Drawing.Size(75, 23);
             this.button_Kesesek.TabIndex = 0;
             this.button_Kesesek.Text = "Késések";
-            this.button_Kesesek.UseVisualStyleBackColor = true;
+            this.button_Kesesek.UseVisualStyleBackColor = false;
             this.button_Kesesek.Click += new System.EventHandler(this.button_Kesesek_Click);
             // 
             // Form_navigalo
@@ -75,6 +85,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_navigalo";
             this.Text = "Könyvkölcsönzés";
+            this.Load += new System.EventHandler(this.Form_navigalo_Load);
             this.ResumeLayout(false);
 
         }

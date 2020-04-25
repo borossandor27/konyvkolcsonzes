@@ -35,5 +35,11 @@ namespace konyvkolcsonzes
             this.Hide();
             Program.form_kesesek.Show();
         }
+
+        private void Form_navigalo_Load(object sender, EventArgs e)
+        {
+ 
+        }
     }
+
 }

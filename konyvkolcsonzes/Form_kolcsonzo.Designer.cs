@@ -119,22 +119,26 @@
             // 
             // button_Insert_kolcsonzes
             // 
+            this.button_Insert_kolcsonzes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Insert_kolcsonzes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button_Insert_kolcsonzes.Location = new System.Drawing.Point(214, 365);
             this.button_Insert_kolcsonzes.Name = "button_Insert_kolcsonzes";
             this.button_Insert_kolcsonzes.Size = new System.Drawing.Size(312, 37);
             this.button_Insert_kolcsonzes.TabIndex = 8;
             this.button_Insert_kolcsonzes.Text = "Rögzítés az adatbázisba";
-            this.button_Insert_kolcsonzes.UseVisualStyleBackColor = true;
+            this.button_Insert_kolcsonzes.UseVisualStyleBackColor = false;
             this.button_Insert_kolcsonzes.Click += new System.EventHandler(this.button_Insert_kolcsonzes_Click);
             // 
             // button_ListabaIr
             // 
+            this.button_ListabaIr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_ListabaIr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button_ListabaIr.Location = new System.Drawing.Point(24, 254);
             this.button_ListabaIr.Name = "button_ListabaIr";
             this.button_ListabaIr.Size = new System.Drawing.Size(312, 35);
             this.button_ListabaIr.TabIndex = 9;
             this.button_ListabaIr.Text = "Listában tárolja az adatot";
-            this.button_ListabaIr.UseVisualStyleBackColor = true;
+            this.button_ListabaIr.UseVisualStyleBackColor = false;
             this.button_ListabaIr.Click += new System.EventHandler(this.button_ListabaIr_Click);
             // 
             // Form_kolcsonzo
